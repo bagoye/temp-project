@@ -61,5 +61,5 @@ def change_password(request):
             return redirect('movies:index')
     else:
         form = PasswordChangeForm(request.user)
-    context = {'form':form}
+    context = {'form':form,}
     return render(request, 'accounts/change_password.html',context)

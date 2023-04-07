@@ -15,19 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-<<<<<<< HEAD
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accounts/urls')),
-] 
-=======
-from django.conf.urls.static import static
-from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('movies/', include('movies.urls')),
-    # path('accounts/', include('accounts.urls')),
-] + static(settings.MEDIA_URL, documents_root=settings.MEDIA_ROOT)
->>>>>>> 21746521fb890b555b542df11dcafa8804e69c9d
+    path('accounts/', include('accounts.urls')),
+]
